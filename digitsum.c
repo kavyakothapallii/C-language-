@@ -1,17 +1,25 @@
 #include <stdio.h>
 
+int digitsum(int n);
+
 int main() {
-	
-    int n , digit , sum;
-    scanf("%d", &n);
-    if  (n >= 10000 && n <= 99999){
-      while(n!=0){
-          digit = n % 10; 
-        sum += digit;        
-        n /= 10;
-      }
-    scanf("%d",&sum);
-    printf("%d",sum);
-    }
+    int num;
+    printf("Enter the number: ");
+    scanf("%d", &num);
+
+    int sum = digitsum(num);
+
+    printf("The sum of the digits of %d is: %d\n", num, sum);
+
     return 0;
+}
+
+int digitsum(int n) {
+    int sum = 0;
+    while (n != 0) {
+        int digit = n % 10;
+        sum = sum + digit;
+        n /= 10;
+    }
+    return sum;
 }
