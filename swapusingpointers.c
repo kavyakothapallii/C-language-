@@ -3,8 +3,8 @@ int swap(int a , int b);
 int _swap(int *a , int *b);
 int main(){
     int x = 5 , y = 3 ;
-    printf("x = %d , y = %d ",x,y);
     _swap(&x,&y);
+    printf("x = %d , y = %d ",x,y);
     return 0 ;
 }
 int _swap(int *a , int *b){
